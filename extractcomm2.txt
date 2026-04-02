@@ -1,0 +1,238 @@
+List of comments for the RPC staff in /workspace/test9951.xml:
+
+1. Please insert any keywords (beyond those that appear in
+the title) for use on https://www.rfc-editor.org/search.
+
+--------
+
+2. Please clarify this sentence. Is the intended meaning 
+(i) "This correlation enables the detection of changes and of the impact." 
+or
+(ii) "This correlation enables the detection and the impact."?
+
+Original:
+   This correlation enables the detection of changes in
+   forwarding paths, such as updated intermediate hops or interfaces,
+   and the resulting impact on delay experienced by customer traffic.
+
+Perhaps (assuming (i), adding a second "of"):
+   This correlation enables the detection of changes in
+   forwarding paths, such as updated intermediate hops or interfaces,
+   and of the resulting impact on delay experienced by customer traffic.
+
+Or (assuming (i), for more precision):
+   This correlation enables the detection of (a) changes in
+   forwarding paths, such as updated intermediate hops or interfaces,
+   and (b) the resulting impact on delay experienced by customer traffic.
+
+--------
+
+3. Should "element Identifier" be "Information Element identifier"?
+The latter term is used in RFC 7011 (which you had mentioned in the intake form).
+
+Original:
+   This category includes multiple indexes of the registered performance
+   metrics: the element Identifier and Metric Name.
+
+--------
+
+4. FYI, we added "is" to make the 2nd sentence complete in each
+definition below. Please let us know if a different meaning was intended.
+For example:
+
+Original:
+  The measurement of one-way delay based on a single Observation Point
+  [RFC7011] somewhere in the network.
+
+Current:
+  The measurement of one-way delay is based on a single Observation Point
+  [RFC7011] somewhere in the network.
+
+--------
+
+5. FYI, we corrected this section number as follows; please review.
+Section 2 of [RFC2330] is the copyright statement; the terms mentioned
+are defined in Section 11 of [RFC2330].
+
+Original:
+   Note that terms such as "singleton" and "sample" are defined in
+   Section 2 of [RFC2330].
+
+Perhaps:
+   Note that terms such as "singleton" and "sample" are defined in
+   Section 11 of [RFC2330].
+
+--------
+
+6. RFC 6991 has been obsoleted by RFC 9911.  We have replaced each citation 
+of RFC 6991 with RFC 9911, as the section numbers seem to contain the data types being
+mentioned. Please review and let us know any further updates. For example:
+
+Original: or ipv6-address-no-zone value for IPv6; see Section 4 of [RFC6991]).
+Current:  or ipv6-address-no-zone value for IPv6; see Section 4 of [RFC9911]).
+
+--------
+
+7. We suggest changing "analysis choice" (4 instances) to 
+"analytic choice" or "analytical choice", because "analysis" is a noun. 
+We note the term "analysis choice" is only used RFC 8912. For example:
+
+Original:
+   see Section 5 of [RFC6703] for background on this analysis choice.
+
+Suggested:
+   see Section 5 of [RFC6703] for background on this analytic choice.
+
+--------
+
+8. FYI, Revision Date will be updated before publication.
+
+--------
+
+9. Please clarify "as defined to the following [...] dimensions"; 
+should it be "as defined across the following [...] dimensions"?
+
+Original:
+   The measured On-Path delay can be aggregated with Flow Aggregation as
+   defined in [RFC7015] to the following device and control-plane
+   dimensions [IANA-IPFIX] to determine:
+
+Perhaps:
+   The measured On-Path delay can be aggregated with Flow Aggregation as
+   defined in [RFC7015] across the following device and control-plane
+   dimensions [IANA-IPFIX] to determine:
+
+--------
+
+10. FYI, we simplified this sentence as follows; please review.
+
+Original:
+   Let us consider the example depicted in Figure 1 from Section 1 as
+   topology example.
+
+Current:
+    Let us consider Figure 1 as a topology example.
+
+--------
+
+11. How may this be rephrased to avoid the odd phrase 
+"offload the IPFIX Exporter from calculating the mean"? 
+Specifically, rather than "offload X from doing a task", we can 
+offload the task - or we can offload X by doing the task elsewhere.
+
+Original:
+   The mean (average) path delay can be calculated by dividing the
+   pathDelaySumDeltaMicroseconds(533) by the packetDeltaCount(2) at the
+   IPFIX data collection in order to offload the IPFIX Exporter from
+   calculating the mean for every Flow at export time.
+
+Perhaps ("offload" changed to "prevent"):
+   The mean (average) path delay can be calculated by dividing the
+   pathDelaySumDeltaMicroseconds(533) by the packetDeltaCount(2) at the
+   IPFIX data collection in order to prevent the IPFIX Exporter from
+   calculating the mean for every Flow at export time.
+
+--------
+
+12. We suggest changing "being accounted" to "being counted" here. 
+Please review the intended meaning. 
+        
+Original:
+   Unsigned64 has been chosen as type for pathDelaySumDeltaMicroseconds
+   to support cases with large delay numbers and where many packets are
+   being accounted.
+   
+Perhaps:
+   Unsigned64 has been chosen as type for pathDelaySumDeltaMicroseconds
+   to support cases with large delay numbers and where many packets are
+   being counted.
+
+--------
+
+13. Should "node" be plural "nodes"? In other words, is this about 
+both an intermediate node and decapsulating node? 
+Also, is it accurate that "on-path delay" should be "On-Path delay" as it is
+elsewhere in this document?
+        
+Original:
+   [...] and be read at the OAM header intermediate and decapsulating
+   node to calculate the on-path delay. 
+
+Perhaps:
+   [...] and be read at the OAM header intermediate and decapsulating
+   nodes to calculate the On-Path delay.
+
+--------
+
+14. Is the intended meaning that attacks by the receiver
+may be possible? If so, we suggest changing "for" to "by" or 
+rephrasing otherwise.
+
+Original:
+   For example, exporting delay metrics may make attacks possible for
+   the receiver of this information; ...
+      
+Perhaps:
+   For example, exporting delay metrics may make attacks possible by
+   the receiver of this information; ...
+
+--------
+
+15. [RFC7012] is not cited in the text.  Please let us know
+where it should be cited; otherwise it will be deleted from the 
+references section.
+
+   [RFC7012] Claise, B., Ed. and B. Trammell, Ed., "Information Model for
+   IP Flow Information Export (IPFIX)", RFC 7012, DOI 10.17487/RFC7012,
+   September 2013, <https://www.rfc-editor.org/info/rfc7012>.
+
+--------
+
+16. FYI, this sentence has been updated to remove the pointer
+ to Section 1. Rationale: Figure 1 is specific enough for the reader to 
+ find the information. And it's in Section 3, not Section 1.
+
+Original:
+   Taking Figure 1 from Section 1 as topology example.
+
+Current:
+   Let's take Figure 1 as a topology example.
+
+--------
+
+17. For Table 4, is it correct that the column headers 
+are intended as the names of the IEs? If so, we recommend 
+rotating the table (so the column headers become the first column) as shown 
+in the edited document. Please review and let us know any updates,
+or if you want to revert to the previous format. (We note that Table 2
+also adds spaces into IE names, perhaps in order get line breaks within
+the cell; please let us know if you'd like to make any updates to Table 2.)
+
+Original (column headers):
+  path Delay Mean Delta Micro..
+  path Delay Min Delta Micro..
+  path Delay Max Delta Micro..
+
+Perhaps intended as the IE names:
+  pathDelayMeanDeltaMicroseconds
+  pathDelayMinDeltaMicroseconds
+  pathDelayMaxDeltaMicroseconds
+
+--------
+
+18. Terminology: Please review usage of these terms and let us
+know if any updates should be made for consistency.
+
+  Flow Record (8 instances) vs. flow record (1 instance)
+
+  Singleton (2 instances) vs. singleton (5 instances)
+
+--------
+
+19. Please review the "Inclusive Language" portion of the online 
+Style Guide <https://www.rfc-editor.org/styleguide/part2/#inclusive_language>
+and let us know if any changes are needed.  Updates of this nature typically
+result in more precise language, which is helpful for readers.
+
+Note that our script did not flag any words in particular, but this should 
+still be reviewed as a best practice.

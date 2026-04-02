@@ -1,0 +1,175 @@
+List of comments for the RPC staff in /workspace/test9951_indentedcomm.xml:
+
+1. Please insert any keywords (beyond those that appear in
+the title) for use on https://www.rfc-editor.org/search.
+
+--------
+
+2. This correlation enables the detection of A and B
+      or This correlation enables A and B.
+      
+      Original:
+      This correlation enables the detection of changes in
+   forwarding paths, such as updated intermediate hops or interfaces,
+   and the resulting impact on delay experienced by customer traffic.
+
+--------
+
+3. FYI, added "is" to make the 2nd sentence complete in each
+          definiton below. Please let us know if a different meaning was intended.
+          For example:
+
+          Original:
+        The measurement of one-way delay based on a single Observation Point
+        [RFC7011] somewhere in the network.
+          Current:
+        The measurement of one-way delay is based on a single Observation Point
+        [RFC7011] somewhere in the network.
+
+--------
+
+4. FYI, we corrected this section number as follows; please review.
+Section 2 of [RFC2330] is the Copyright statement; the terms mentioned
+are defined in Section 11 of [RFC2330].
+
+Original:
+   Note that terms such as "singleton" and "sample" are defined in
+   Section 2 of [RFC2330].
+
+Perhaps:
+   Note that terms such as "singleton" and "sample" are defined in
+   Section 11 of [RFC2330].
+
+--------
+
+5. We suggest changing "analysis choice" (4 instances) to 
+            "analytic choice" or "analytical choice", because "analysis" is a noun. 
+            We note the term "analysis choice" is only used RFC 8912. For example:
+            
+            Original:
+               see Section 5 of [RFC6703] for background on this analysis choice.
+
+            Perhaps:
+              see Section 5 of [RFC6703] for background on this analytic choice.
+
+--------
+
+6. "to the following dimensions" - reads oddly
+
+--------
+
+7. Note to PE: Should this xref point to Section 1 or
+Section 3?
+
+Original:
+   Let us consider the example depicted in Figure 1 from Section 1 as
+   topology example.
+
+Current:
+    Let us consider Figure 1 as a toplogy example.
+
+--------
+
+8. We suggest rephrasing this to avoid "offload X from doing Y"
+
+Original:
+   The mean (average) path delay can be calculated by dividing the
+   pathDelaySumDeltaMicroseconds(TBD8) by the packetDeltaCount(2) at the
+   IPFIX data collection in order to offload the IPFIX Exporter from
+   calculating the mean for every Flow at export time.
+
+Perhaps:
+   The mean (average) path delay can be calculated by dividing the
+   pathDelaySumDeltaMicroseconds(TBD8) by the packetDeltaCount(2) at the
+   IPFIX data collection in order to prevent the IPFIX Exporter from
+   calculating the mean for every Flow at export time.
+
+Or:
+   The mean (average) path delay can be calculated by dividing the
+   pathDelaySumDeltaMicroseconds(TBD8) by the packetDeltaCount(2) at the
+   IPFIX data collection in order to offload the task of calculating
+   the mean for every Flow at export time from the IPFIX Exporter.
+
+--------
+
+9. We suggest changing "being accounted" to "being counted"
+        here, as "accounted" usually has an object. Please review
+        the intended meaning. 
+        
+        Original:
+           Unsigned64 has been chosen as type for pathDelaySumDeltaMicroseconds
+   to support cases with large delay numbers and where many packets are
+   being accounted.
+   
+   Perhaps:
+            Unsigned64 has been chosen as type for pathDelaySumDeltaMicroseconds
+   to support cases with large delay numbers and where many packets are
+   being counted.
+
+--------
+
+10. Should "node" be plural "nodes"? In other words, is this about both
+        an intermediate node and decapsulating node? 
+        
+        Original:
+         [...] and be read at the OAM header intermediate and decapsulating
+   node to calculate the on-path delay. 
+
+   Perhaps:
+         [...] and be read at the OAM header intermediate and decapsulating
+   nodes to calculate the on-path delay.
+
+--------
+
+11. Is the intended meaning that attacks by the receive
+      may be possible? If so, we suggest changing "for" to "by" or 
+      rephrasing otherwise.
+      
+      Original:
+      For example, exporting delay metrics may make attacks possible for
+   the receiver of this information; 
+      
+   Perhaps:
+      For example, exporting delay metrics may make attacks possible by
+   the receiver of this information;
+
+--------
+
+12. [RFC7012] The following reference is not cited in the text.  Please let
+us know where it should be cited; otherwise it will be deleted from the 
+references section.
+
+   [RFC7012] Claise, B., Ed. and B. Trammell, Ed., "Information Model for
+   IP Flow Information Export (IPFIX)", RFC 7012, DOI 10.17487/RFC7012,
+   September 2013, <https://www.rfc-editor.org/info/rfc7012>.
+
+--------
+
+13. FYI, this sentence has been updated to remove the pointer
+ to Section 1. Rationale: Figure 1 is specific enough for the reader to 
+ find the information. And it's in Section 3, not Section 1.
+
+Original:
+   Taking Figure 1 from Section 1 as topology example.
+
+Current:
+   Taking Figure 1 as a topology example.
+
+--------
+
+14. For Table 4, is it correct that the column headers for the
+      were intended as the names of the IEs? If so, we recommend 
+      rotating the table (so the column headers become the first column) as shown 
+      in the edited document. Please review and let us know any updates,
+      or if you want to revert to the previous format. (We note that Table 2
+      also puts space into IE names in order get line breaks.)
+      
+      Original (column header):
+      path Delay Mean Delta Micro..
+      path Delay Min Delta Micro..
+      path Delay Max Delta Micro..
+
+      Perhaps intended as the IE names:
+      pathDelayMeanDeltaMicroseconds
+      pathDelayMinDeltaMicroseconds
+      pathDelayMaxDeltaMicroseconds
